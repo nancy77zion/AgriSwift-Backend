@@ -1,4 +1,4 @@
-const errorHandler = require("../middlewares/error")
+const {errorHandler} = require("../middlewares/error")
 
 const db = require('../models')
 

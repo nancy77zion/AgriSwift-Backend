@@ -9,7 +9,7 @@ const errorHandler = require("../middlewares/error")
 const register = async (req, res , next) => {
  
   try {
-    const { username, email, password, role,phoneNumber } = req.body;
+    const { fullname, email, password, role,phoneNumber } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10)
 
     // Generate a unique confirmation token for the user
@@ -20,7 +20,7 @@ const register = async (req, res , next) => {
 
      // Create a new user with hashed password
      const newUser = await db.models.Users.create({
-      username: username,
+      fullname: fullname,
       email: email,
       password: hashedPassword,
       role: role,
