@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     retypePassword: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     
     role: {
