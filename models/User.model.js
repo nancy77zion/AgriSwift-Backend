@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       primaryKey:true
     },
-    username: {
+    fullname: {
       type: DataTypes.STRING,
       allowNull: false,
       
@@ -23,14 +23,14 @@ module.exports = (sequelize, DataTypes) => {
     phoneNumber: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isPhoneNumber: function(value) {
-          // Custom validation to check if value matches either format
-          if (!/^\+?(\d{11})$/.test(value) && !/^0(\d{10})$/.test(value)) {
-            throw new Error('Invalid phone number format');
-          }
-        }
-      }
+      // validate: {
+      //   isPhoneNumber: function(value) {
+      //     // Custom validation to check if value matches either format
+      //     if (!/^\+?(\d{11})$/.test(value) && !/^0(\d{10})$/.test(value)) {
+      //       throw new Error('Invalid phone number format');
+      //     }
+      //   }
+      // }
     },
     password: {
       type: DataTypes.STRING,
