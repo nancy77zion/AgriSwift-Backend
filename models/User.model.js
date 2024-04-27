@@ -36,6 +36,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    retypePassword: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    
     role: {
       type: DataTypes.ENUM('farmer', 'admin',  'retailer', 'distributor'),
       //allowNull: false
