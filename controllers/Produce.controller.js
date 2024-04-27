@@ -31,7 +31,7 @@ const createProduce = async (req, res, next) => {
       stock,
       price,
       description,
-    
+  
     });
 
     await newProduce.setUser(UserUserId);
