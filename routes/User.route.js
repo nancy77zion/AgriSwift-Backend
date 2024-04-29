@@ -7,7 +7,7 @@ const routerManager = express.Router();
 
 routerManager.get('/user/:id', verifyToken, getUser)
 routerManager.patch('/update/:id', verifyToken, updateUser)
-routerManager.delete('/delete/:id', deleteUser)
+routerManager.delete('/delete/:id', verifyToken, deleteUser)
 
 
 module.exports = routerManager;
